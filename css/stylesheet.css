@@ -32,21 +32,22 @@ header h4 {
 nav {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     animation: none;
 }
 .navItem {
-    margin-right: 10%;
-    margin-left: 10%;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-bottom: 0.25gem;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
 }
 .navItem a {
     text-decoration: none;
     color: white;
-    transition: color 0.5s;
-    -webkit-transition: color 0.5s;
 }
-.navItem a:hover {
-    color: #70a1ff;
+.navItem:hover {
+    background-color: #005da9;
 }
 
 .navItem h5 {
@@ -94,13 +95,13 @@ main {
 /*frames*/
 .frame {
     width: 30%;
-    background-color: #E30614;
+    background-color: #005da9 ;
     height: auto;
     transition: color 2s;
     transition: background-color 2s ease-in;
 }
 .frame:hover {
-    background-color: #005da9;
+    background-color: #E30614;
     color: #EBEBEB
 }
 .frame a {
@@ -154,15 +155,21 @@ main {
 }
 
 /* collumn1/2 pageitems */
+.imageItem {
+    background-color: #E30614;
+    padding: 0.45%;
+}
+
 .imageItem img {
     width: 100%;
     height: auto;
-    border: 5px solid #B7C9CD;
+    /*border: 5px solid #E30614;*/
 }
 .textItem {
     padding: 1%;
-    background-color: #E30614;
-    border: 5px solid #B7C9CD;
+    color: #ffffff;
+    background-color: #005da9;
+    /*border: 5px solid #E30614;*/
 }
 
 .itemTitle, .collumn1\/2 p {
