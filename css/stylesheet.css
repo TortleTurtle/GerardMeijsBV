@@ -1,0 +1,256 @@
+/*basics first*/
+body, html {
+    width: 100vw;
+    margin: 0;
+    background-color: #EBEBEB;
+}
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+.container {
+    width: 100%;
+    height: auto;
+}
+
+/*header and nav*/
+header {
+    width: 100%;
+    height: auto;
+    background-color: #E30614;
+}
+header h4 {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation: none;
+}
+.navItem {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+.navItem a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+}
+.navItem a:hover {
+    color: #70a1ff;
+}
+
+.navItem h5 {
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+/*slider*/
+.slider {
+    display: block;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    max-height: 600px;
+}
+.slide {
+    width: 100%;
+}
+
+/*banner*/
+.banner {
+    display: block;
+    width: 100%;
+    background-color: dimgray;
+}
+.bannerImage {
+    width: 100%;
+    display: block;
+}
+
+main {
+    display: block;
+    width: 100%;
+}
+
+/*Home Page Title*/
+.pageTitle {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*frames*/
+.frame {
+    width: 30%;
+    background-color: #E30614;
+    height: auto;
+    transition: color 2s;
+    transition: background-color 2s ease-in;
+}
+.frame:hover {
+    background-color: #005da9;
+    color: #EBEBEB
+}
+.frame a {
+    color: inherit;
+    text-decoration: none;
+}
+.frameTitle {
+    height: 20%;
+    text-align: center;
+}
+.frameTitle h3 {
+    color: #EBEBEB;
+    padding-top: 5%;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+.frameImage {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.frameImage img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+.frame p {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    #collumn1\/3 {
+        display: block;
+    }
+    .frame {
+        width: 80%;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* collumn1/2 */
+.collumn1\/2 {
+    width: 40%;
+}
+
+/* collumn1/2 pageitems */
+.imageItem img {
+    width: 100%;
+    height: auto;
+    border: 5px solid #B7C9CD;
+}
+.textItem {
+    padding: 1%;
+    background-color: #E30614;
+    border: 5px solid #B7C9CD;
+}
+
+.itemTitle, .collumn1\/2 p {
+    margin: 1em 0.25em 1em 0.25em;
+}
+
+/*lists*/
+ul {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    height: auto;
+    margin-top: 2em;
+    background-color: #1B2021;
+    color: #B7C9CD;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.footerColumn img {
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+.footerColumn {
+    width: 30%;
+}
+#footerRight ul {
+    margin-top: 90px;
+}
+
+/*Animations*/
+.enlarge {
+    transition: transform .2s;
+}
+@media screen and (min-width: 601px){
+    .frame:hover {
+        transform: scale(1.25);
+    }
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+}
+@-webkit-keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+}
+
+/*text */
+h1, h3, h5 {
+    font-family: 'Roboto', sans-serif;
+}
+h2, h4, h6, p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 700;
+}
+h2 {
+    font-size: 3em;
+    font-weight: 600;
+}
+h3 {
+    font-size: 2em;
+    font-weight: 600;
+}
+h4 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+h5 {
+    font-size: 1.25em;
+    font-weight: 700;
+}
+h6 {
+    font-size: 1.25em;
+    font-weight: 800;
+}
