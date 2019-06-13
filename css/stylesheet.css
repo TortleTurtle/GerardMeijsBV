@@ -32,21 +32,22 @@ header h4 {
 nav {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     animation: none;
 }
 .navItem {
-    margin-right: 10%;
-    margin-left: 10%;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-bottom: 0.4em;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
 }
 .navItem a {
     text-decoration: none;
     color: white;
-    transition: color 0.5s;
-    -webkit-transition: color 0.5s;
 }
-.navItem a:hover {
-    color: #70a1ff;
+.navItem:hover {
+    background-color: #005da9;
 }
 
 .navItem h5 {
@@ -94,13 +95,13 @@ main {
 /*frames*/
 .frame {
     width: 30%;
-    background-color: #E30614;
+    background-color: #005da9;
     height: auto;
-    transition: color 2s;
-    transition: background-color 2s ease-in;
+    transition: background-color 2s;
+    -webkit-transition: background-color 2s;
 }
 .frame:hover {
-    background-color: #005da9;
+    background-color: #E30614;
     color: #EBEBEB
 }
 .frame a {
@@ -136,7 +137,7 @@ main {
     text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     #collumn1\/3 {
         display: block;
     }
@@ -154,15 +155,17 @@ main {
 }
 
 /* collumn1/2 pageitems */
+.imageItem {
+    background-color: #E30614;
+    padding: 0.5%;
+}
 .imageItem img {
     width: 100%;
     height: auto;
-    border: 5px solid #B7C9CD;
 }
 .textItem {
     padding: 1%;
-    background-color: #E30614;
-    border: 5px solid #B7C9CD;
+    background-color: #005da9;
 }
 
 .itemTitle, .collumn1\/2 p {
@@ -185,16 +188,34 @@ footer {
     justify-content: space-around;
     align-items: stretch;
 }
+
 .footerColumn img {
-    margin: auto;
     width: 100%;
     height: auto;
 }
+footer .footerColumn:first-child {
+    display: flex;
+    align-items: center;
+}
+
 .footerColumn {
     width: 30%;
 }
 #footerRight ul {
     margin-top: 90px;
+}
+@media screen and (max-width: 800px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerColumn {
+        width: 100%;
+        text-align: center;
+    }
+    .footerColumn ul {
+        list-style-type: none;
+    }
 }
 
 /*Animations*/
