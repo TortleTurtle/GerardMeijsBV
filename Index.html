@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gerard Meijs BV</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Roboto|Open+Sans" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7647cf35c6.js"></script>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
 <body>
@@ -18,22 +19,23 @@
     </nav>
 </header>
 <main>
-    <div class="slider">
-        <div class="slide fade">
-            <img src="images/Banner_home.jpg" alt="eerste slide">
-        </div>
-        <div class="slide fade">
-            <img class="bannerImage" src="images/Banner_verhuur.jpg" alt="tweede slide">
-        </div>
-        <div class="slide fade">
-            <img class="bannerImage" src="images/Banner_Loods_frankrijk.jpg" alt="derde slide">
+    <div class="carousel-container">
+        <i class="fas fa-angle-right" id="nextBtn"></i>
+        <i class="fas fa-angle-left" id="prevBtn"></i>
+        <div class="carousel-slide">
+            <img src="images/Banner_Aldam1.jpg" id="lastClone" alt="">
+            <img src="images/GerardMeijs_Banner.jpg" alt="Gerard Meijs BV logo">
+            <img src="images/Banner_home.jpg" alt="">
+            <img src="images/Banner_Loods_frankrijk.jpg" alt="">
+            <img src="images/Banner_verhuur.jpg" alt="">
+            <img src="images/GerardMeijs_Banner.jpg" id="firstClone" alt="Gerard Meijs BV logo">
         </div>
     </div>
     <div class="pageTitle">
         <h1>Gerard Meijs BV</h1>
         <h2>Middelharnis</h2>
     </div>
-    <div class="row" id="collumn1/3">
+    <div class="row" id="frames">
         <div class="frame enlarge" id="verhuur">
             <a href="Verhuur.html">
                 <div class="container">
@@ -56,7 +58,7 @@
                     <div class="frameTitle">
                         <h3>Verkoop</h3>
                     </div>
-                    <p>Betreft locaties in de verkoop.</p>
+                    <p>Bedrijfsruimte te koop.</p>
                 </div>
             </a>
         </div>
@@ -69,7 +71,7 @@
                     <div class="frameTitle">
                         <h3>Entreposage en stalling in Frankrijk</h3>
                     </div>
-                    <p>Stalling voor uw carravan of camper in frankrijk</p>
+                    <p>Op- en overslag van goederen, stalling van camper of caravan in Frankrijk.</p>
                 </div>
             </a>
         </div>
@@ -77,9 +79,7 @@
 </main>
 <footer>
     <div class="footerColumn" id="footerLeft">
-        <div class="container">
             <img class="footerThumbnail" src="images/GerardMeijs_Banner.jpg">
-        </div>
     </div>
     <div class="footerColumn" id="footerMiddle">
         <h5>Contactgegevens:</h5>

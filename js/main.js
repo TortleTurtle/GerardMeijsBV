@@ -1,47 +1,58 @@
-//image slider on homepage.
-let slideIndex = 0;
-showSlides();
+//carousel
+const carouselSlide = document.querySelector(".carousel-slide");
+const carouselImages = document.querySelectorAll(".carousel-slide img");
 
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("slide");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+//buttons
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+//carousel counter
+let counter = 1;
+const size = carouselImages[0].clientWidth;
+
+carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+
+//carousel listeners & timers
+nextBtn.addEventListener('click', ()=>nextImage());
+prevBtn.addEventListener('click', ()=>prevImage());
+let carouselTimer = setTimeout(() => nextImage(), 5000);
+carouselSlide.addEventListener('transitionend', ()=>loopCarousel());
+
+function nextImage() {
+    if (counter >= carouselImages.length - 1) {
+        clearTimeout(carouselTimer);
+        carouselTimer = setTimeout(() => nextImage(), 5000);
+        return;
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
+    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    counter++;
+    carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+    clearTimeout(carouselTimer);
+    carouselTimer = setTimeout(() => nextImage(), 5000);
 }
 
-//Sticky header
-/*let header = document.getElementById('navbar');
-let headerOffset =  header.offsetTop;
-
-window.onscroll = function () {
-    stickyHeader();
-};
-
-function stickyHeader() {
-    if (window.pageYOffset > headerOffset) {
-        header.classList.add("sticky");
+function prevImage() {
+    if (counter <= 0) {
+        clearTimeout(carouselTimer);
+        carouselTimer = setTimeout(() => nextImage(), 5000);
+        return;
     }
-    else {
-        header.classList.remove("sticky");
-    }
-}*/
+    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    counter--;
+    carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+    clearTimeout(carouselTimer);
+    carouselTimer = setTimeout(() => nextImage(), 5000);
+}
 
-//hide navbar when scrolling.
-/*let prevScrollpos = window.pageYOffset;
-window.addEventListener("scroll", hideNavbar());
-function hideNavbar() {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
-    } else {
-        document.getElementById("navbar").style.top = "-50px";
+function loopCarousel() {
+    if (carouselImages[counter].id === 'lastClone') {
+        carouselSlide.style.transition = 'none';
+        counter = carouselImages.length - 2;
+        carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
     }
-    prevScrollpos = currentScrollPos;
-}*/
+    if (carouselImages[counter].id === 'firstClone') {
+        carouselSlide.style.transition = 'none';
+        counter = 1;
+        carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+    }
+}
