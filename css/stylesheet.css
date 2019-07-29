@@ -1,19 +1,23 @@
-/*basics first*/
-body, html {
+/*basics styling*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html {
     width: 100vw;
-    margin: 0;
     background-color: #EBEBEB;
 }
+body {
+    width: 100%;
+}
+
 .row {
     display: flex;
     justify-content: space-around;
 }
-.container {
-    width: 100%;
-    height: auto;
-}
 
-/*header and nav*/
+/*header & nav*/
 header {
     width: 100%;
     height: auto;
@@ -34,37 +38,88 @@ nav {
     display: flex;
     justify-content: space-around;
     animation: none;
+    
 }
 .navItem {
     padding-right: 5%;
     padding-left: 5%;
+<<<<<<< HEAD
     margin-bottom: 0.25gem;
     transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s;
+=======
+    margin-bottom: 0.4em;
+>>>>>>> blue
 }
 .navItem a {
     text-decoration: none;
     color: white;
 }
+<<<<<<< HEAD
 .navItem:hover {
     background-color: #005da9;
 }
 
+=======
+>>>>>>> blue
 .navItem h5 {
-    margin-top: 2.5vh;
-    margin-bottom: 2.5vh;
+    padding: 0.4em 0.4em 0.4em 0.4em;
+    font-family: 'Times New Roman', Times, serif;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+}
+.navItem h5:hover {
+    background-color: #005da9;
 }
 
-/*slider*/
-.slider {
-    display: block;
+/*carousel*/
+.carousel-container{
     width: 100%;
+    height: auto;
     margin: auto;
     overflow: hidden;
-    max-height: 600px;
+    position: relative;
 }
-.slide {
+.carousel-slide{
+    display: flex;
     width: 100%;
+    height: auto;
+}
+.carousel-slide img{
+    width: 100%;
+    height: auto;
+}
+#prevBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 1%;
+    font-size: 2em;
+    color: gray;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: color 0.5s, opacity 0.5s;
+    -webkit-transition: color 0.5s, opacity 0.5s;
+    -moz-transition: color 0.5s, opacity 0.5s;
+    -ms-transition: color 0.5s, opacity 0.5s;
+}
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 98%;
+    font-size: 2em;
+    color: gray;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: color 0.5s, opacity 0.5s;
+    -webkit-transition: color 0.5s, opacity 0.5s;
+    -moz-transition: color 0.5s, opacity 0.5s;
+    -ms-transition: color 0.5s, opacity 0.5s;
+}
+#prevBtn:hover, #nextBtn:hover {
+    color: white;
+    opacity: 1;
 }
 
 /*banner*/
@@ -83,11 +138,11 @@ main {
     width: 100%;
 }
 
-/*Home Page Title*/
+/*Page Title*/
 .pageTitle {
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     margin-right: auto;
     margin-left: auto;
 }
@@ -95,10 +150,14 @@ main {
 /*frames*/
 .frame {
     width: 30%;
+<<<<<<< HEAD
     background-color: #005da9 ;
+=======
+    background-color: #005da9;
+>>>>>>> blue
     height: auto;
-    transition: color 2s;
-    transition: background-color 2s ease-in;
+    transition: background-color 2s;
+    -webkit-transition: background-color 2s;
 }
 .frame:hover {
     background-color: #E30614;
@@ -107,6 +166,9 @@ main {
 .frame a {
     color: inherit;
     text-decoration: none;
+}
+.frame a:hover {
+    cursor: pointer;
 }
 .frameTitle {
     height: 20%;
@@ -137,9 +199,9 @@ main {
     text-align: center;
 }
 
-@media screen and (max-width: 600px) {
-    #collumn1\/3 {
-        display: block;
+@media screen and (max-width: 700px) {
+    #frames {
+        flex-direction: column;
     }
     .frame {
         width: 80%;
@@ -149,11 +211,17 @@ main {
     }
 }
 
+/* collumn1/1 */
+.collumn1-1 {
+    padding: 5%;
+} 
+
 /* collumn1/2 */
-.collumn1\/2 {
+.collumn1-2 {
     width: 40%;
 }
 
+<<<<<<< HEAD
 /* collumn1/2 pageitems */
 .imageItem {
     background-color: #E30614;
@@ -170,10 +238,37 @@ main {
     color: #ffffff;
     background-color: #005da9;
     /*border: 5px solid #E30614;*/
+=======
+/* pageitems */
+.imageItem {
+    background-color: #E30614;
+    padding: 0.5%;
+}
+.imageItem img {
+    width: 100%;
+    height: auto;
+}
+.textItem {
+    padding: 1%;
+    background-color: #005da9;
+>>>>>>> blue
+}
+.itemTitle, .collumn1-2 p {
+    margin: 1em 0.25em 1em 0.25em;
 }
 
-.itemTitle, .collumn1\/2 p {
-    margin: 1em 0.25em 1em 0.25em;
+/*verhuur & verkoop*/
+.verhuurItem, .verkoopItem {
+    align-items: flex-start;
+}
+@media screen and (max-width: 800px) {
+    .verhuurItem, .verkoopItem {
+        flex-direction: column;
+        align-items: center;
+    }
+    .verhuurItem .collumn1-2, .verkoopItem .collumn1-2{
+        width: 80%;
+    }
 }
 
 /*lists*/
@@ -190,18 +285,32 @@ footer {
     color: #B7C9CD;
     display: flex;
     justify-content: space-around;
-    align-items: stretch;
+    align-items: center;
+
+}
+.footerColumn {
+    flex-basis: 30%;
 }
 .footerColumn img {
-    margin: auto;
     width: 100%;
     height: auto;
 }
-.footerColumn {
-    width: 30%;
+#footerMiddle ul {
+    margin-top: 1em;
 }
-#footerRight ul {
-    margin-top: 90px;
+
+@media screen and (max-width: 800px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerColumn {
+        width: 100%;
+        text-align: center;
+    }
+    .footerColumn ul {
+        list-style-type: none;
+    }
 }
 
 /*Animations*/
