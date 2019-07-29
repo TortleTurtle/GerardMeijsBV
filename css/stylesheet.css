@@ -43,25 +43,12 @@ nav {
 .navItem {
     padding-right: 5%;
     padding-left: 5%;
-<<<<<<< HEAD
-    margin-bottom: 0.25gem;
-    transition: background-color 0.5s;
-    -webkit-transition: background-color 0.5s;
-=======
     margin-bottom: 0.4em;
->>>>>>> blue
 }
 .navItem a {
     text-decoration: none;
     color: white;
 }
-<<<<<<< HEAD
-.navItem:hover {
-    background-color: #005da9;
-}
-
-=======
->>>>>>> blue
 .navItem h5 {
     padding: 0.4em 0.4em 0.4em 0.4em;
     font-family: 'Times New Roman', Times, serif;
@@ -150,11 +137,7 @@ main {
 /*frames*/
 .frame {
     width: 30%;
-<<<<<<< HEAD
-    background-color: #005da9 ;
-=======
     background-color: #005da9;
->>>>>>> blue
     height: auto;
     transition: background-color 2s;
     -webkit-transition: background-color 2s;
@@ -221,24 +204,6 @@ main {
     width: 40%;
 }
 
-<<<<<<< HEAD
-/* collumn1/2 pageitems */
-.imageItem {
-    background-color: #E30614;
-    padding: 0.45%;
-}
-
-.imageItem img {
-    width: 100%;
-    height: auto;
-    /*border: 5px solid #E30614;*/
-}
-.textItem {
-    padding: 1%;
-    color: #ffffff;
-    background-color: #005da9;
-    /*border: 5px solid #E30614;*/
-=======
 /* pageitems */
 .imageItem {
     background-color: #E30614;
@@ -251,7 +216,6 @@ main {
 .textItem {
     padding: 1%;
     background-color: #005da9;
->>>>>>> blue
 }
 .itemTitle, .collumn1-2 p {
     margin: 1em 0.25em 1em 0.25em;
