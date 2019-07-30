@@ -1,58 +1,81 @@
-//carousel
-const carouselSlide = document.querySelector(".carousel-slide");
-const carouselImages = document.querySelectorAll(".carousel-slide img");
+// //carousel
+// const carouselSlide = document.querySelector(".carousel-slide");
+// const carouselImages = document.querySelectorAll(".carousel-slide img");
 
-//buttons
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
+// //buttons
+// const prevBtn = document.getElementById("prevBtn");
+// const nextBtn = document.getElementById("nextBtn");
 
-//carousel counter
-let counter = 1;
-const size = carouselImages[0].clientWidth;
+// //carousel counter
+// let counter = 1;
+// const size = carouselImages[0].clientWidth;
 
-carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+// carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
 
-//carousel listeners & timers
-nextBtn.addEventListener('click', ()=>nextImage());
-prevBtn.addEventListener('click', ()=>prevImage());
-let carouselTimer = setTimeout(() => nextImage(), 5000);
-carouselSlide.addEventListener('transitionend', ()=>loopCarousel());
+// //carousel listeners & timers
+// nextBtn.addEventListener('click', ()=>nextImage());
+// prevBtn.addEventListener('click', ()=>prevImage());
+// let carouselTimer = setTimeout(() => nextImage(), 5000);
+// carouselSlide.addEventListener('transitionend', ()=>loopCarousel());
 
-function nextImage() {
-    if (counter >= carouselImages.length - 1) {
-        clearTimeout(carouselTimer);
-        carouselTimer = setTimeout(() => nextImage(), 5000);
-        return;
-    }
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    counter++;
-    carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
-    clearTimeout(carouselTimer);
-    carouselTimer = setTimeout(() => nextImage(), 5000);
+// function nextImage() {
+//     if (counter >= carouselImages.length - 1) {
+//         clearTimeout(carouselTimer);
+//         carouselTimer = setTimeout(() => nextImage(), 5000);
+//         return;
+//     }
+//     carouselSlide.style.transition = "transform 0.4s ease-in-out";
+//     counter++;
+//     carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+//     clearTimeout(carouselTimer);
+//     carouselTimer = setTimeout(() => nextImage(), 5000);
+// }
+
+// function prevImage() {
+//     if (counter <= 0) {
+//         clearTimeout(carouselTimer);
+//         carouselTimer = setTimeout(() => nextImage(), 5000);
+//         return;
+//     }
+//     carouselSlide.style.transition = "transform 0.4s ease-in-out";
+//     counter--;
+//     carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+//     clearTimeout(carouselTimer);
+//     carouselTimer = setTimeout(() => nextImage(), 5000);
+// }
+
+// function loopCarousel() {
+//     if (carouselImages[counter].id === 'lastClone') {
+//         carouselSlide.style.transition = 'none';
+//         counter = carouselImages.length - 2;
+//         carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+//     }
+//     if (carouselImages[counter].id === 'firstClone') {
+//         carouselSlide.style.transition = 'none';
+//         counter = 1;
+//         carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+//     }
+// }
+
+//Makes the slider on the website functional
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
-
-function prevImage() {
-    if (counter <= 0) {
-        clearTimeout(carouselTimer);
-        carouselTimer = setTimeout(() => nextImage(), 5000);
-        return;
-    }
-    carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    counter--;
-    carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
-    clearTimeout(carouselTimer);
-    carouselTimer = setTimeout(() => nextImage(), 5000);
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
-
-function loopCarousel() {
-    if (carouselImages[counter].id === 'lastClone') {
-        carouselSlide.style.transition = 'none';
-        counter = carouselImages.length - 2;
-        carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
+slideIndex = 0;
+showSlides();
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
     }
-    if (carouselImages[counter].id === 'firstClone') {
-        carouselSlide.style.transition = 'none';
-        counter = 1;
-        carouselSlide.style.transform = "translateX(" + (-size * counter ) + "px)";
-    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
 }
+setInterval(showSlides, 5000); // Change integer here to change seconds (1000 is 1 second)
