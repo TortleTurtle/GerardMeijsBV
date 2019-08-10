@@ -6,7 +6,7 @@
 }
 html {
     width: 100vw;
-    background-color: #EBEBEB;
+    background-color: whitesmoke;
 }
 body {
     width: 100%;
@@ -24,6 +24,7 @@ header {
     background-color: #E30614;
 }
 header h4 {
+    font-family: 'Merienda', bold;
     color: white;
     text-align: center;
     margin-top: 0;
@@ -52,6 +53,8 @@ nav {
 .navItem h5 {
     padding: 0.4em 0.4em 0.4em 0.4em;
     font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s;
 }
@@ -59,22 +62,18 @@ nav {
     background-color: #005da9;
 }
 
-/*carousel*/
-.carousel-container{
+/*slider*/
+.slider-content{
     width: 100%;
-    height: auto;
-    margin: auto;
-    overflow: hidden;
     position: relative;
+    margin: auto;
 }
-.carousel-slide{
-    display: flex;
-    width: 100%;
-    height: auto;
+.slides {
+    display: none;
 }
-.carousel-slide img{
-    width: 100%;
-    height: auto;
+.slides img{
+    max-height: 40em;
+    object-fit: cover;
 }
 #prevBtn {
     position: absolute;
@@ -82,8 +81,7 @@ nav {
     z-index: 10;
     left: 1%;
     font-size: 2em;
-    color: gray;
-    opacity: 0.5;
+    color: #E30614;
     cursor: pointer;
     transition: color 0.5s, opacity 0.5s;
     -webkit-transition: color 0.5s, opacity 0.5s;
@@ -96,7 +94,6 @@ nav {
     z-index: 10;
     left: 98%;
     font-size: 2em;
-    color: gray;
     opacity: 0.5;
     cursor: pointer;
     transition: color 0.5s, opacity 0.5s;
@@ -105,9 +102,10 @@ nav {
     -ms-transition: color 0.5s, opacity 0.5s;
 }
 #prevBtn:hover, #nextBtn:hover {
-    color: white;
+    color: #005da9;
     opacity: 1;
 }
+
 
 /*banner*/
 .banner {
@@ -180,6 +178,7 @@ main {
     padding-right: 5%;
     padding-bottom: 5%;
     text-align: center;
+    color: white;
 }
 
 @media screen and (max-width: 700px) {
@@ -259,8 +258,10 @@ footer {
     width: 100%;
     height: auto;
 }
-#footerMiddle ul {
-    margin-top: 1em;
+.footerColumn ul {
+    font-family: 'Cutive Mono', monospace;
+    font-size: 1.3em;
+    list-style: none;
 }
 
 @media screen and (max-width: 800px) {
@@ -271,9 +272,7 @@ footer {
     .footerColumn {
         width: 100%;
         text-align: center;
-    }
-    .footerColumn ul {
-        list-style-type: none;
+        padding: 0 0 1em 0;
     }
 }
 
@@ -283,7 +282,7 @@ footer {
 }
 @media screen and (min-width: 601px){
     .frame:hover {
-        transform: scale(1.25);
+        transform: scale(1.10);
     }
 }
 
@@ -313,6 +312,7 @@ h2, h4, h6, p {
 h1 {
     font-size: 4em;
     font-weight: 700;
+    letter-spacing: 2.5px;
 }
 h2 {
     font-size: 3em;
@@ -321,6 +321,7 @@ h2 {
 h3 {
     font-size: 2em;
     font-weight: 600;
+    letter-spacing: 2px;
 }
 h4 {
     font-size: 1.5em;
@@ -329,8 +330,10 @@ h4 {
 h5 {
     font-size: 1.25em;
     font-weight: 700;
+    letter-spacing: 2px;
 }
 h6 {
     font-size: 1.25em;
     font-weight: 800;
+    letter-spacing: 3px;
 }

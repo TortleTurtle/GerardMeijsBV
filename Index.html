@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gerard Meijs BV</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Roboto|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Merienda|Cutive+Mono" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7647cf35c6.js"></script>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 </head>
@@ -18,19 +18,27 @@
         <span class="navItem"><a href="Stalling.html"><h5>Stalling</h5></a></span>
     </nav>
 </header>
-<main>
-    <div class="carousel-container">
+<section class="slider">
+    <div class="slider-content">
+        <div class="slides fade">
+            <img src="images/GerardMeijs_Banner.jpg" style="width:100%">
+        </div>
+        <div class="slides fade">
+            <img src="images/Banner_home.jpg" style="width:100%">
+        </div>
+        <div class="slides fade">
+            <img src="images/Banner_Loods_frankrijk.jpg" style="width:100%">
+        </div>
+        <div class="slides fade">
+            <img src="images/Banner_verhuur.jpg" style="width:100%">
+        </div>
+
+        <!-- Next and previous buttons -->
         <i class="fas fa-angle-right" id="nextBtn"></i>
         <i class="fas fa-angle-left" id="prevBtn"></i>
-        <div class="carousel-slide">
-            <img src="images/Banner_verhuur.jpg" id="lastClone" alt="">
-            <img src="images/GerardMeijs_Banner.jpg" alt="Gerard Meijs BV logo">
-            <img src="images/Banner_home.jpg" alt="">
-            <img src="images/Banner_Loods_frankrijk.jpg" alt="">
-            <img src="images/Banner_verhuur.jpg" alt="">
-            <img src="images/GerardMeijs_Banner.jpg" id="firstClone" alt="Gerard Meijs BV logo">
-        </div>
     </div>
+</section>
+<main>
     <div class="pageTitle">
         <h1>Gerard Meijs BV</h1>
         <h2>Middelharnis</h2>
@@ -82,7 +90,6 @@
             <img class="footerThumbnail" src="images/GerardMeijs_Banner.jpg">
     </div>
     <div class="footerColumn" id="footerMiddle">
-        <h5>Contactgegevens:</h5>
         <ul>
             <li>Gerard Meijs BV</li>
             <li>Postbus 77</li>
