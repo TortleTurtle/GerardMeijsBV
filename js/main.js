@@ -72,6 +72,7 @@ const mobileNav = () => {
     else {
       burger.style.transform = "rotate(90deg)";
     }
+    
   });
  }
 
