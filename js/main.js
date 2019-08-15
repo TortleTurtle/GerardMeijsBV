@@ -61,7 +61,7 @@ const mobileNav = () => {
         link.style.animation = '';
       }
       else {
-        link.style.animation = `fade 0.5 ease forwards ${index / 5 + 2}s`;
+        link.style.animation = `fade 0.5 ease forwards ${index * 1 + 2}s`;
       }
     });
 
@@ -72,7 +72,7 @@ const mobileNav = () => {
     else {
       burger.style.transform = "rotate(90deg)";
     }
-    
+
   });
  }
 
