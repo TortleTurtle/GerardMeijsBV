@@ -274,6 +274,23 @@ main {
     }
 }
 
+.parallax {
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*parrallax for verkoop */
+#verkoopItems .parallax:nth-child(1) {
+    height: 80vh;
+    background-image: url("../images/Loods_2.jpg");
+}
+#verkoopItems .parallax:nth-child(3) {
+    height: 80vh;
+    background-image: url("../images/Loods_1.jpg");
+}
 /*lists*/
 ul {
     font-family: 'Open Sans', sans-serif;
