@@ -255,8 +255,14 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-top: 5vh solid #005da9;
+    border-top: 5vh solid #E30614;
     border-bottom: 5vh solid #E30614;
+}
+@media screen and (max-width: 800px) {
+    .parallax {
+        background-attachment: scroll;
+        background-size: contain;
+    }
 }
 
 /*parralax for verhuur*/
@@ -276,8 +282,13 @@ main {
 }
 
 /*description of items*/
+.description {
+    text-align: center;
+    color: rgb(226, 226, 226);
+    background-color: #005da9;
+}
 .description h3, .description h5 {
-    margin: 0.5em 0 0 0;
+    padding: 0.5em 0 0 0;
 }
 .description p {
     margin: 0.5em 0 0.5em 0;
