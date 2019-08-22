@@ -146,7 +146,6 @@ nav {
     color: #005da9;
 }
 
-
 /*banner*/
 .banner {
     display: block;
@@ -236,42 +235,52 @@ main {
 /* collumn1/1 */
 .collumn1-1 {
     padding: 5%;
-} 
+}
 
 /* collumn1/2 */
 .collumn1-2 {
     width: 40%;
 }
-
-/* pageitems */
-.imageItem {
-    background-color: #E30614;
-    padding: 0.5%;
-}
-.imageItem img {
-    width: 100%;
-    height: auto;
-}
-.textItem {
-    padding: 1%;
-    background-color: #005da9;
-}
-.itemTitle, .collumn1-2 p {
-    margin: 1em 0.25em 1em 0.25em;
-}
-
-/*verhuur & verkoop*/
-.verhuurItem, .verkoopItem {
-    align-items: flex-start;
-}
 @media screen and (max-width: 800px) {
-    .verhuurItem, .verkoopItem {
-        flex-direction: column;
-        align-items: center;
-    }
-    .verhuurItem .collumn1-2, .verkoopItem .collumn1-2{
+    .collumn1-2 {
         width: 80%;
     }
+}
+
+/*parralax*/
+.parallax {
+    width: 100%;
+    height: 80vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 5vh solid #005da9;
+    border-bottom: 5vh solid #E30614;
+}
+
+/*parralax for verhuur*/
+#verhuurItems .firstImg {
+    background-image: url("../images/Banner_verhuur.jpg");
+}
+#verhuurItems .secondImg {
+    background-image: url("../images/Banner_verkoop.jpg");
+}
+
+/*parrallax for verkoop*/
+#verkoopItems .firstImg {
+    background-image: url("../images/Loods_2.jpg");
+}
+#verkoopItems .secondImg {
+    background-image: url("../images/Loods_1.jpg");
+}
+
+/*description of items*/
+.description h3, .description h5 {
+    margin: 0.5em 0 0 0;
+}
+.description p {
+    margin: 0.5em 0 0.5em 0;
 }
 
 /*lists*/
