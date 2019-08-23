@@ -1,3 +1,12 @@
+//preloader
+const preloader = () => {
+  const loaderanimation = document.querySelector(".preloader");
+
+  window.addEventListener("load", () => {
+    loaderanimation.classList.add("preloader-finish");
+  });
+}
+
 //slider
 const loadSlider = () => {
 
@@ -76,13 +85,13 @@ const mobileNav = () => {
   });
  }
 
- const app = () => {
-   mobileNav();
+const app = () => {
+	preloader();
+  	mobileNav();
+  	//check if there is a slider on the page.
+  	if (document.getElementsByClassName("slider").length > 0) {
+    	loadSlider();
+  	}
+}
 
-   //check if there is a slider on the page.
-   if (document.getElementsByClassName("slider").length > 0) {
-     loadSlider();
-   }
- }
-
- app();
+app();
