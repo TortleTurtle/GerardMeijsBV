@@ -287,10 +287,10 @@ main {
 
 /*parralax for verhuur*/
 #verhuurItems .firstImg {
-    background-image: url("../images/verhuur/Verhuur_1.png");
+    background-image: url("../images/Verhuur/Verhuur_1.png");
 }
 #verhuurItems .secondImg {
-    background-image: url("../images/verhuur/Verhuur_3.png");
+    background-image: url("../images/Verhuur/Verhuur_3.png");
 }
 
 /*parrallax for verkoop*/
