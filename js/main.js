@@ -85,13 +85,45 @@ const mobileNav = () => {
   });
  }
 
+const descriptionImages = (page) => {
+  const thumbnails = document.querySelectorAll(".thumbnail");
+  const imageHolder = document.querySelector(".fullImage");
+  const fullImage = document.querySelector(".fullImage img");
+  const closeBtn = document.querySelector(".fullImage i:first-child");
+
+  function showFullImage(i) {
+    fullImage.src = `images/${page}/${page}_${i + 1}.png`;
+    imageHolder.classList.toggle("fullImage-active");
+  }
+
+  //eventlisteners
+  closeBtn.addEventListener("click", () => {
+    imageHolder.classList.toggle("fullImage-active");
+    fullImage.src = "";
+  });
+
+  for (let i = 0; i < thumbnails.length; i++) {
+    const thumbnail = thumbnails[i];
+    thumbnail.addEventListener("click", () => showFullImage(i));
+  }
+
+
+}
+
 const app = () => {
 	preloader();
-  	mobileNav();
-  	//check if there is a slider on the page.
-  	if (document.getElementsByClassName("slider").length > 0) {
-    	loadSlider();
-  	}
+  mobileNav();
+  //check if there is a slider on the page.
+  if (document.getElementsByClassName("slider").length > 0) {
+   	loadSlider();
+  }
+  if (document.getElementById("verhuurItems")) {
+    descriptionImages("Verhuur");
+  }
+  if (document.getElementById("verkoopItems")) {
+    descriptionImages("Verkoop");
+  }
+
 }
 
 app();
