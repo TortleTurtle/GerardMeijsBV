@@ -278,10 +278,17 @@ main {
     border-top: 5vh solid #E30614;
     border-bottom: 5vh solid #E30614;
 }
+.parallax img {
+    display: none;
+}
 @media screen and (max-width: 800px) {
     .parallax {
-        background-attachment: scroll;
-        background-size: contain;
+        background-image: none;
+        height: auto;
+    }
+    .parallax img{
+        display: block;
+        width: 100%;
     }
 }
 
