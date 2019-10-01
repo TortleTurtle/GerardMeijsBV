@@ -337,6 +337,10 @@ main {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: background-color 1s 0.1s ease-out;
+}
+.thumbnail:hover {
+    background-color: #E30614;
 }
 .thumbnail img{
     width: 100%;
