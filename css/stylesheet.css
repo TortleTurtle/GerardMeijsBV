@@ -88,7 +88,7 @@ nav {
     transition: color;
     font-size: 1.5em;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     header {
         flex-direction: row;
     }
@@ -254,7 +254,7 @@ main {
 
 /* collumn1/1 */
 .collumn1-1 {
-    padding: 5%;
+    padding: 0 5% 0 5%;
 }
 
 /* collumn1/2 */
@@ -402,9 +402,14 @@ ul {
 footer {
     width: 100%;
     height: auto;
-    margin-top: 2em;
     background-color: #1B2021;
     color: #B7C9CD;
+}
+
+footer .row {
+    width: 100%;
+    height: auto;
+    margin-top: 2em;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -423,9 +428,14 @@ footer {
     font-size: 1.3em;
     list-style: none;
 }
+footer .row:nth-child(2) {
+    margin: 0;
+    text-align: center;
+    font-size: 0.5em;
+}
 
 @media screen and (max-width: 800px) {
-    footer {
+    footer .row:first-child {
         flex-direction: column;
         align-items: center;
     }
