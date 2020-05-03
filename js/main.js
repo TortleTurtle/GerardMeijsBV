@@ -123,7 +123,6 @@ const app = () => {
   if (document.getElementById("verkoopItems")) {
     descriptionImages("Verkoop");
   }
-
 }
 
 app();

@@ -133,6 +133,7 @@ nav {
     display: none;
 }
 .slides img{
+    width: 100%;
     max-height: 40em;
     object-fit: cover;
 }
@@ -309,21 +310,29 @@ main {
 }
 
 /*description of items*/
+#verhuurItems .left, #verkoopItems .left {
+    justify-content: start;
+}
+
 .description {
     text-align: left;
     margin-top: 2em;
     margin-bottom: 2em;
 }
 .description h3, .description h5 {
-    margin: 0.5em 0 0 16px;
+    margin: 0.5em 0 0 0.5em;
 }
 .description h3 {
     font-family: 'fjalla one', sans-serif;
     color: #E30614;
     text-decoration: underline #005da9;
 }
-.description p {
-    margin: 0.5em 0 0.5em 16px;
+.description p{
+    margin: 0.5em 0 0.5em 2em;
+}
+.description ul {
+    margin: 0.5em 0 0.5em 2em;
+    list-style: none;
 }
 .gallery {
     flex-wrap: wrap;
